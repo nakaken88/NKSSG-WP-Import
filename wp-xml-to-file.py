@@ -378,10 +378,8 @@ def save_item_to_file(item, xml_main_info, site_link, dest_dir):
 
     texts.append('---')
 
-    # remove html comment and wp comment tag
     if get_text(item, 'content:encoded'):
         content = get_text(item, 'content:encoded')
-        content = re.sub('(<!--.*?-->)', '', content)
         texts.append(content)
 
 
